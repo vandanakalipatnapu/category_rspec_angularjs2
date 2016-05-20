@@ -1,0 +1,31 @@
+<html>
+
+
+	<body>
+		<div class = "container">
+
+			post_id:{{post_id}}
+			
+					<div class = "text-success">Title: {{postshow.title}}<br/></div>
+					<div class = "text-success">Description: {{postshow.description}}<br/></div>
+					<div class = "text-success">Category: {{postshow.category}}<br/></div>
+					<hr/>
+					<h3 class = "text-danger">Comments:</h3>
+					<div ng-repeat = "comment in comment_details">
+						<div class = "text-success">id: {{comment.id}}<br/></div>
+						<div class = "text-success">comment: {{comment.description}}<br/></div>
+						<a href = "#" ng-click = "destroycomment(post.id,comment)">Delete</a>
+					</div>
+					<hr/>
+					<a href = "#commentform">New Comment</a>
+				
+				
+				
+			
+			<a href ="#allposts" ng-click = "indexdata()">All Posts</a>
+			
+		</div>
+
+		
+	</body>
+</html>
